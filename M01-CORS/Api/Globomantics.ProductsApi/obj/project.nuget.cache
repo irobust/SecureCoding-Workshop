@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "0CHx3HgghYDztuRBWeBUe/Nqinh+on9LPn5wuBKMa/BXSU9TK5nfx/We+70jSvislYqBVdPm4V+LQLUMXoXdlA==",
+  "success": true,
+  "projectFilePath": "/Users/phanupong/Downloads/configuring-cors-in-aspnet-and-aspnet-core-2/02/demos/Exercise Files/Module 02 Clip 03/Api/Globomantics.ProductsApi/Globomantics.ProductsApi.csproj",
+  "expectedPackageFiles": [
+    "/Users/phanupong/.nuget/packages/bogus/28.4.1/bogus.28.4.1.nupkg.sha512"
+  ],
+  "logs": []
+}

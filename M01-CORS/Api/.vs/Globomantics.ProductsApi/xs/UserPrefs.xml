@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{84E70464-FA88-454F-A624-BCEB4A8276B4}|Default">
+  <MonoDevelop.Ide.ItemProperties.Globomantics.ProductsApi PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Globomantics.ProductsApi/Startup.cs">
+    <Files>
+      <File FileName="Globomantics.ProductsApi/Startup.cs" Line="28" Column="77" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Globomantics.ProductsApi" expanded="True">
+            <Node name="Globomantics.ProductsApi" expanded="True">
+              <Node name="appsettings.json" expanded="True" />
+              <Node name="Startup.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

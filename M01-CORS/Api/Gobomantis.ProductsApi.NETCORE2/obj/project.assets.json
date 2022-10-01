@@ -1,0 +1,149 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "Bogus/28.4.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Bogus.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Bogus.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Razor.Design/2.1.2": {
+        "type": "package",
+        "build": {
+          "build/netstandard2.0/Microsoft.AspNetCore.Razor.Design.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Microsoft.AspNetCore.Razor.Design.props": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Bogus/28.4.1": {
+      "sha512": "SmHm3V+4j7VZZ4VnsnSXdRf9ZeBVir33YSnRHLseAuSHpmhk+hi66DXqmT4sXPOz0zFJDPGnFYuIwkB8tTMycg==",
+      "type": "package",
+      "path": "bogus/28.4.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bogus.28.4.1.nupkg.sha512",
+        "bogus.nuspec",
+        "lib/net40/Bogus.dll",
+        "lib/net40/Bogus.pdb",
+        "lib/net40/Bogus.xml",
+        "lib/netstandard1.3/Bogus.dll",
+        "lib/netstandard1.3/Bogus.pdb",
+        "lib/netstandard1.3/Bogus.xml",
+        "lib/netstandard2.0/Bogus.dll",
+        "lib/netstandard2.0/Bogus.pdb",
+        "lib/netstandard2.0/Bogus.xml"
+      ]
+    },
+    "Microsoft.AspNetCore.Razor.Design/2.1.2": {
+      "sha512": "fe1+dpy+eM4IX1zodsvkihO1Spuj0NecfStWzvkYoMo7/ziOsqSv4vFK36ZpBfHa4gpdCEwaU46EPzdq+ZDYhQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.razor.design/2.1.2",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/netstandard2.0/Microsoft.AspNetCore.Razor.Design.CodeGeneration.targets",
+        "build/netstandard2.0/Microsoft.AspNetCore.Razor.Design.props",
+        "buildMultiTargeting/Microsoft.AspNetCore.Razor.Design.props",
+        "microsoft.aspnetcore.razor.design.2.1.2.nupkg.sha512",
+        "microsoft.aspnetcore.razor.design.nuspec",
+        "tasks/net46/Microsoft.AspNetCore.Razor.Tasks.dll",
+        "tasks/netstandard2.0/Microsoft.AspNetCore.Razor.Tasks.dll",
+        "tools/Microsoft.AspNetCore.Razor.Language.dll",
+        "tools/Microsoft.CodeAnalysis.CSharp.dll",
+        "tools/Microsoft.CodeAnalysis.Razor.dll",
+        "tools/Microsoft.CodeAnalysis.dll",
+        "tools/Newtonsoft.Json.dll",
+        "tools/runtimes/unix/lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
+        "tools/runtimes/win/lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
+        "tools/rzc.deps.json",
+        "tools/rzc.dll",
+        "tools/rzc.runtimeconfig.json"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "Bogus >= 28.4.1",
+      "Microsoft.AspNetCore.Razor.Design >= 2.1.2"
+    ]
+  },
+  "packageFolders": {
+    "/Users/phanupong/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/phanupong/Downloads/configuring-cors-in-aspnet-and-aspnet-core-2/02/demos/Exercise Files/Module 02 Clip 03/Api/Gobomantis.ProductsApi.NETCORE2/Gobomantis.ProductsApi.NETCORE2.csproj",
+      "projectName": "Gobomantis.ProductsApi.NETCORE2",
+      "projectPath": "/Users/phanupong/Downloads/configuring-cors-in-aspnet-and-aspnet-core-2/02/demos/Exercise Files/Module 02 Clip 03/Api/Gobomantis.ProductsApi.NETCORE2/Gobomantis.ProductsApi.NETCORE2.csproj",
+      "packagesPath": "/Users/phanupong/.nuget/packages/",
+      "outputPath": "/Users/phanupong/Downloads/configuring-cors-in-aspnet-and-aspnet-core-2/02/demos/Exercise Files/Module 02 Clip 03/Api/Gobomantis.ProductsApi.NETCORE2/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/phanupong/.config/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp6.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "netcoreapp6.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "netcoreapp6.0",
+        "dependencies": {
+          "Bogus": {
+            "target": "Package",
+            "version": "[28.4.1, )"
+          },
+          "Microsoft.AspNetCore.Razor.Design": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[2.1.2, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.106/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

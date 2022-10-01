@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Globomantics.ProductsApi/1.0.0": {
+        "dependencies": {
+          "Bogus": "28.4.1"
+        },
+        "runtime": {
+          "Globomantics.ProductsApi.dll": {}
+        }
+      },
+      "Bogus/28.4.1": {
+        "runtime": {
+          "lib/netstandard2.0/Bogus.dll": {
+            "assemblyVersion": "28.4.1.0",
+            "fileVersion": "28.4.1.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Globomantics.ProductsApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Bogus/28.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SmHm3V+4j7VZZ4VnsnSXdRf9ZeBVir33YSnRHLseAuSHpmhk+hi66DXqmT4sXPOz0zFJDPGnFYuIwkB8tTMycg==",
+      "path": "bogus/28.4.1",
+      "hashPath": "bogus.28.4.1.nupkg.sha512"
+    }
+  }
+}

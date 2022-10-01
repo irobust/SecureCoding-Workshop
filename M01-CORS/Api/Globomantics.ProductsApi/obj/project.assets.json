@@ -1,0 +1,107 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "Bogus/28.4.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Bogus.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Bogus.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Bogus/28.4.1": {
+      "sha512": "SmHm3V+4j7VZZ4VnsnSXdRf9ZeBVir33YSnRHLseAuSHpmhk+hi66DXqmT4sXPOz0zFJDPGnFYuIwkB8tTMycg==",
+      "type": "package",
+      "path": "bogus/28.4.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bogus.28.4.1.nupkg.sha512",
+        "bogus.nuspec",
+        "lib/net40/Bogus.dll",
+        "lib/net40/Bogus.pdb",
+        "lib/net40/Bogus.xml",
+        "lib/netstandard1.3/Bogus.dll",
+        "lib/netstandard1.3/Bogus.pdb",
+        "lib/netstandard1.3/Bogus.xml",
+        "lib/netstandard2.0/Bogus.dll",
+        "lib/netstandard2.0/Bogus.pdb",
+        "lib/netstandard2.0/Bogus.xml"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "Bogus >= 28.4.1"
+    ]
+  },
+  "packageFolders": {
+    "/Users/phanupong/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/phanupong/Downloads/configuring-cors-in-aspnet-and-aspnet-core-2/02/demos/Exercise Files/Module 02 Clip 03/Api/Globomantics.ProductsApi/Globomantics.ProductsApi.csproj",
+      "projectName": "Globomantics.ProductsApi",
+      "projectPath": "/Users/phanupong/Downloads/configuring-cors-in-aspnet-and-aspnet-core-2/02/demos/Exercise Files/Module 02 Clip 03/Api/Globomantics.ProductsApi/Globomantics.ProductsApi.csproj",
+      "packagesPath": "/Users/phanupong/.nuget/packages/",
+      "outputPath": "/Users/phanupong/Downloads/configuring-cors-in-aspnet-and-aspnet-core-2/02/demos/Exercise Files/Module 02 Clip 03/Api/Globomantics.ProductsApi/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/phanupong/.config/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp6.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "netcoreapp6.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "netcoreapp6.0",
+        "dependencies": {
+          "Bogus": {
+            "target": "Package",
+            "version": "[28.4.1, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.106/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

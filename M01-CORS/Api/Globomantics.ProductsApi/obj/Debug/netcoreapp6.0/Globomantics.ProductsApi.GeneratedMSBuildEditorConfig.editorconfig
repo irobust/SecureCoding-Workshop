@@ -1,0 +1,16 @@
+is_global = true
+build_property.TargetFramework = netcoreapp6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Globomantics.ProductsApi
+build_property.RootNamespace = Globomantics.ProductsApi
+build_property.ProjectDir = /Users/phanupong/Downloads/configuring-cors-in-aspnet-and-aspnet-core-2/02/demos/Exercise Files/Module 02 Clip 03/Api/Globomantics.ProductsApi/
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/phanupong/Downloads/configuring-cors-in-aspnet-and-aspnet-core-2/02/demos/Exercise Files/Module 02 Clip 03/Api/Globomantics.ProductsApi
+build_property._RazorSourceGeneratorDebug =
