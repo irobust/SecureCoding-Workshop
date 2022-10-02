@@ -25,10 +25,6 @@ namespace Globomantics.ProductsApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var allowedOrigin = Configuration.GetValue<string>("AllowOrigin") ?? "";
-            services.AddCors(options => options.AddPolicy("AllowAnyOrigin",
-                builder => builder.WithOrigins("http://localhost:5001").SetPreflightMaxAge(TimeSpan.FromMinutes(10))
-            ));
             services.AddControllers();
         }
 
@@ -39,7 +35,6 @@ namespace Globomantics.ProductsApi
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseCors("AllowAnyOrigin");
 
             app.UseRouting();
 
