@@ -2,8 +2,8 @@
 ### Allow All Origins
 ```
 services.AddCors(options => options.AddPolicy("AllowAnyOrigin",
-                builder => builder.WithOrigins("http://localhost:5001")
-            ));
+                    builder => builder.WithOrigins("http://localhost:5001")
+                )); 
 ```
 
 ### Retrieved Allow Origin from settings
@@ -43,15 +43,15 @@ options.AddPolicy("PublicApi", builder => builder.AllowAnyOrigin().WithMethods("
 ### Add CORS to public and private api
 1. Add policy for public and private api
 ```
-options.AddPolicy("PublicApi", builder => builder.AllowAnyOrigin().WithMethods("Get").WithHeaders("Content-Type"));
+options.AddPolicy("PrivateApi", builder => builder.WithOrigins(allowedOrigin).WithMethods("POST", "PUT", "PATCH", "DELETE", "OPTIONS").WithHeaders("Content-Type", "Authorization"));
 
-options.AddPolicy("AllowAnyOrigin", builder => builder.WithOrigins(allowedOrigin).AllowCredentials().SetPreflightMaxAge(TimeSpan.FromMinutes(10)));
+options.AddPolicy("PublicApi", builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
 ```
 
 2. Apply default policy
 ```
 app.UseRouting();
-app.UseCors("AllowAnyOrigin");
+app.UseCors("Private Api");
 ```
 
 3. Add EnableCors annotation to controller or action

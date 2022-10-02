@@ -26,10 +26,26 @@ namespace Globomantics.ProductsApi
         public void ConfigureServices(IServiceCollection services)
         {
             var allowedOrigin = Configuration.GetValue<string>("AllowOrigin") ?? "";
-            services.AddCors(options => options.AddPolicy("AllowAnyOrigin",
-                builder => builder.WithOrigins("http://localhost:5001").SetPreflightMaxAge(TimeSpan.FromMinutes(10))
-            ));
+
+            services.AddCors(options => {
+                options.AddPolicy("AllowAnyOrigin", builder => builder.WithOrigins(allowedOrigin).SetPreflightMaxAge(TimeSpan.FromMinutes(10)));
+
+                options.AddPolicy("PrivateApi", builder => builder.WithOrigins(allowedOrigin).WithMethods("POST", "PUT", "PATCH", "DELETE", "OPTIONS").WithHeaders("Content-Type", "Authorization"));
+
+                options.AddPolicy("PublicApi", builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+
+                options.AddPolicy("AllowSubDomain", builder => builder.WithOrigins("http://*.example.com").SetIsOriginAllowedToAllowWildcardSubdomains());
+
+                options.AddPolicy("AllowMultipleDomain", builder => builder.SetIsOriginAllowed(checkWhitelistingDomain));
+
+            });
             services.AddControllers();
+        }
+
+        private static bool checkWhitelistingDomain(string host)
+        {
+            var corsOriginAllowed = new[] { "example.com", "demo.com", "globalmantics" };
+            return corsOriginAllowed.Any(origin => host.Contains(origin));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,7 +55,7 @@ namespace Globomantics.ProductsApi
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseCors("AllowAnyOrigin");
+            app.UseCors("PrivateApi");
 
             app.UseRouting();
 
