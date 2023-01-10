@@ -1,10 +1,22 @@
 # Enable CORS
-### Allow All Origins
+### Allow Specific Origins
 ```
-services.AddCors(options => options.AddPolicy("AllowAnyOrigin",
-                builder => builder.WithOrigins("http://localhost:5001")
+public void ConfigureServices(IServiceCollection services){
+...
+services.AddCors(options => options.AddPolicy("AllowSpecificOrigin",
+                builder => builder.WithOrigins("http://localhost:8080")
             ));
+...
+}
 ```
+```
+public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
+    ....
+    app.useCors("AllowSpecificOrigin");
+    ....
+}
+```
+
 
 ### Retrieved Allow Origin from settings
 #### Move AllowedOrigin to AppSettings
