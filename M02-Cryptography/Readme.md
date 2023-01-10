@@ -2,8 +2,8 @@
 1. HMAC hashing
 ```
 const crypto = require("crypto");
-const salt = crypto.randomBytes(256).toString('hex');
-const hmac = crypto.createHmac('sha256');
+const key = crypto.randomBytes(256).toString('hex');
+const hmac = crypto.createHmac('sha256', key);
 const data = 'something you want to hash';
 hmac.update(data);
 console.log(hmac.digest('hex'));
