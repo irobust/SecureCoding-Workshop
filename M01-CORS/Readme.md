@@ -55,9 +55,11 @@ options.AddPolicy("PublicApi", builder => builder.AllowAnyOrigin().WithMethods("
 ### Add CORS to public and private api
 1. Add policy for public and private api
 ```
-options.AddPolicy("PublicApi", builder => builder.AllowAnyOrigin().WithMethods("Get").WithHeaders("Content-Type"));
-
-options.AddPolicy("AllowAnyOrigin", builder => builder.WithOrigins(allowedOrigin).AllowCredentials().SetPreflightMaxAge(TimeSpan.FromMinutes(10)));
+services.AddCors(options => {
+                    options.AddPolicy("Private", builder => builder.WithOrigins(allowedOrigin).SetPreflightMaxAge(TimeSpan.FromMinutes(10)));
+                    options.AddPolicy("Public", builder => builder.AllowAnyOrigin());
+                }
+);
 ```
 
 2. Apply default policy
