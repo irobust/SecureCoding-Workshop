@@ -39,7 +39,7 @@ const tag = cipher.getAuthTag();
 console.log(tag);
 
 // Decrypt data
-const decipher = cipher.CreateDecipheriv(algorithm, key, iv);
+const decipher = crypto.createDecipheriv(algorithm, key, iv);
 decipher.setAuthTag(tag);
 let decrypted = decipher.update(encrypted, 'hex', 'utf-8');
 decrypted += decipher.final('utf-8');
