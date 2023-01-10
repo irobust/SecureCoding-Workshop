@@ -54,7 +54,7 @@ const sally  = crypto.createDiffieHellman(2048);
 const sallyKey = sally.generateKeys();
 
 const bob = crypto.createDiffieHellman(sally.getPrime(), sally.getGenerator());
-const bobKey = crypto.generateKeys();
+const bobKey = bob.generateKeys();
 
 const bobSecret = sally.computeSecret(bobKey);
 const sallySecret = bob.computeSecret(sallyKey);
