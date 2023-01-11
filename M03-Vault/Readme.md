@@ -35,14 +35,16 @@ vault kv delete -version=1 secretv2/apikeys/demo
 vault kv destroy -version=1 secretv2/apikeys/demo
 vault secret enable mysecret kv
 vault kv enable-versioning mysecret
+vault kv rollback -version=1 secret/apikey
+vault kv patch secret/apikey token2=asdgqwer token3=asdfghjkwert
 ```
 
 ### Working with token
 ```
-vault token list
 vault token create
 vault token create -ttl=5m
 vault token renew -increment=5m
+vault token lookup [token]
 vault token lookup -accessor [accessor]
 vault token capabilities [token] mysecret/apikeys
 vault token revoke [token]
@@ -57,4 +59,5 @@ vault policy read dev-policy
 vault policy delete dev-policy
 vault token create -policy=dev-policy
 vault write auth/userpass/users/demo token_policy="dev-policy"
+vault write identity/entity/name/demo policies="dev-policy"
 ```
