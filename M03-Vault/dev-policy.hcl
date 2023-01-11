@@ -1,6 +1,6 @@
-path "mysecret/*"{
+path "demo/mysecret/*"{
     capabilities = ["read"]
 }
-path "secretv2/*"{
+path "secret/*"{
     capabilities = ["read"]
 }
