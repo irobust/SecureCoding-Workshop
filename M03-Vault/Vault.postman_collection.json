@@ -1,0 +1,297 @@
+{
+	"info": {
+		"_postman_id": "5ef090d5-74b7-4edd-99a7-22cec77addc5",
+		"name": "Vault",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "seal-status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8200/v1/sys/seal-status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8200",
+					"path": [
+						"v1",
+						"sys",
+						"seal-status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "init-server",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"secret_shares\": 5,\n  \"secret_threshold\": 3\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8200/v1/sys/init",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8200",
+					"path": [
+						"v1",
+						"sys",
+						"init"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unseal",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"key\":\"\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8200/v1/sys/unseal",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8200",
+					"path": [
+						"v1",
+						"sys",
+						"unseal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "write-secret",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Vault-Token",
+						"value": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"key\":\"user\",\n\t\"value\":\"dbUser\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8200/v1/secret/data/mySecret",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8200",
+					"path": [
+						"v1",
+						"secret",
+						"data",
+						"mySecret"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-secret",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-Vault-Token",
+						"value": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"key\":\"user\",\n\t\"value\":\"dbUser2\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8200/v1/secret/data/mySecret",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8200",
+					"path": [
+						"v1",
+						"secret",
+						"data",
+						"mySecret"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "read-secret",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Vault-Token",
+						"value": ""
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8200/v1/secret/data/mySecret",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8200",
+					"path": [
+						"v1",
+						"secret",
+						"data",
+						"mySecret"
+					]
+				},
+				"description": "Vault"
+			},
+			"response": []
+		},
+		{
+			"name": "list-secrets-engines",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Vault-Token",
+						"value": ""
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8200/v1/sys/mounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8200",
+					"path": [
+						"v1",
+						"sys",
+						"mounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "enable-userpass-auth",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Vault-Token",
+						"value": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"type\":\"userpass\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8200/v1/sys/auth/userpass",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8200",
+					"path": [
+						"v1",
+						"sys",
+						"auth",
+						"userpass"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-userpass-user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Vault-Token",
+						"value": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"vaultuser\",\n\t\"password\":\"vault\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8200/v1/auth/userpass/users/vaultuser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8200",
+					"path": [
+						"v1",
+						"auth",
+						"userpass",
+						"users",
+						"vaultuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userpass-login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"password\":\"vault\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8200/v1/auth/userpass/login/vaultuser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8200",
+					"path": [
+						"v1",
+						"auth",
+						"userpass",
+						"login",
+						"vaultuser"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
