@@ -58,6 +58,6 @@ vault policy write dev-policy dev-policy.hcl
 vault policy read dev-policy
 vault policy delete dev-policy
 vault token create -policy=dev-policy
-vault write auth/userpass/users/demo token_policy="dev-policy"
+vault write auth/userpass/users/demo token_policies="dev-policy"
 vault write identity/entity/name/demo policies="dev-policy"
 ```
