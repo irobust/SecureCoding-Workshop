@@ -29,7 +29,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
       "Microsoft": "Information"
     }
   },
-  "AllowOrigin": "http://localhost:5000"
+  "AllowOrigin": "http://localhost:8080"
 }
 ```
 
