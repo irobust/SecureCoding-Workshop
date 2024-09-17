@@ -12,7 +12,7 @@ services.AddCors(options => options.AddPolicy("AllowSpecificOrigin",
 ```
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
     ....
-    app.useCors("AllowSpecificOrigin");
+    app.UseCors("AllowSpecificOrigin");
     ....
 }
 ```
