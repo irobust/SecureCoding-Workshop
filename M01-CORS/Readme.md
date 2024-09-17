@@ -36,7 +36,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
 #### Retrieved allowOrigin
 ```
 var allowedOrigin = Configuration.GetValue<string>("AllowOrigin") ?? "";
-services.AddCors(options => options.AddPolicy("AllowAnyOrigin",
+services.AddCors(options => options.AddPolicy("AllowSpecificOrigin",
     builder => builder.WithOrigins(allowedOrigin)
 ));
 services.AddControllers();
