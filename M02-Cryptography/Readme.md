@@ -18,14 +18,19 @@ const hashedPassword = crypto.pbkdf2Sync(password, salt, 100000, 512, 'sha512');
 console.log(hashedPassword.toString('hex'));
 ```
 
+1. Scrypt hashing
+```
+const password = 'password1';
+const salt = crypto.randomBytes(32);
+const hashedPassword = crypto.scryptSync(password, salt, 32);
+console.log(hashedPassword.toString('hex'));
+```
+
 1. AES Encryption
 ```
 const crypto = require("crypto");
 const algorithm = 'aes-256-gcm';
-const password = 'password1';
-
-const salt = crypto.randomBytes(32);
-const key = crypto.scryptSync(password, salt, 32);
+const key = crypto.randomBytes(32);
 const iv = crypto.randomBytes(16);
 
 // Encrypt data
