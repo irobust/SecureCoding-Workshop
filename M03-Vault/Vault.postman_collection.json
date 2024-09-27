@@ -1,16 +1,22 @@
 {
 	"info": {
-		"_postman_id": "5ef090d5-74b7-4edd-99a7-22cec77addc5",
+		"_postman_id": "3f9483ae-71e2-4ea5-addd-d1899c19c930",
 		"name": "Vault",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7314361"
 	},
 	"item": [
 		{
 			"name": "seal-status",
 			"request": {
 				"method": "GET",
-				"header": [],
-				"body": {},
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "http://localhost:8200/v1/sys/seal-status",
 					"protocol": "http",
@@ -93,10 +99,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"key\":\"user\",\n\t\"value\":\"dbUser\"\n}"
+					"raw": "{\n    \"data\": {\n        \"username\": \"dbuser\",\n        \"password\": \"dbpassword\"\n    }\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8200/v1/secret/data/mySecret",
+					"raw": "http://localhost:8200/v1/secret-kv/prod/data/token",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -104,9 +110,10 @@
 					"port": "8200",
 					"path": [
 						"v1",
-						"secret",
+						"secret-kv",
+						"prod",
 						"data",
-						"mySecret"
+						"token"
 					]
 				}
 			},
@@ -128,10 +135,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"key\":\"user\",\n\t\"value\":\"dbUser2\"\n}"
+					"raw": "{\n\t\"data\": {\n        \"username\" : \"admin\",\n        \"password\" : \"P@ssw0rd\"\n    }\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8200/v1/secret/data/mySecret",
+					"raw": "http://localhost:8200/v1/secret-kv/prod/data/mySecret",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -139,7 +146,8 @@
 					"port": "8200",
 					"path": [
 						"v1",
-						"secret",
+						"secret-kv",
+						"prod",
 						"data",
 						"mySecret"
 					]
@@ -157,9 +165,8 @@
 						"value": ""
 					}
 				],
-				"body": {},
 				"url": {
-					"raw": "http://localhost:8200/v1/secret/data/mySecret",
+					"raw": "http://localhost:8200/v1/secret-kv/prod/data/token",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -167,9 +174,10 @@
 					"port": "8200",
 					"path": [
 						"v1",
-						"secret",
+						"secret-kv",
+						"prod",
 						"data",
-						"mySecret"
+						"token"
 					]
 				},
 				"description": "Vault"
@@ -186,7 +194,6 @@
 						"value": ""
 					}
 				],
-				"body": {},
 				"url": {
 					"raw": "http://localhost:8200/v1/sys/mounts",
 					"protocol": "http",
