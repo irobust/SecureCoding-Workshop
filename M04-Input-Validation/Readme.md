@@ -34,11 +34,11 @@ public class FileName: ValidationAttribute
         ErrorMessage = "File Name must be jpg or png";
     }
 
-    public override bool IsValid(object value)
+    public override bool IsValid(object? value)
     {
         var extensions = new[] { ".jpeg", ".jpg", ".png" };
         bool result = extensions.Any(ext => value.ToString().Contains(ext));
-        return base.IsValid(result);
+        return result;
     }
 }
 ```
