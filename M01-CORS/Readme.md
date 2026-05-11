@@ -29,13 +29,13 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
       "Microsoft": "Information"
     }
   },
-  "AllowOrigin": "http://localhost:8080"
+  "AllowedHosts": "http://localhost:8080"
 }
 ```
 
 #### Retrieved allowOrigin
 ```
-var allowedOrigin = Configuration.GetValue<string>("AllowOrigin") ?? "";
+var allowedOrigin = Configuration.GetValue<string>("AllowedHosts") ?? "";
 services.AddCors(options => options.AddPolicy("AllowSpecificOrigin",
     builder => builder.WithOrigins(allowedOrigin)
 ));
